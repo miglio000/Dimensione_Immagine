@@ -6,13 +6,14 @@ namespace DimensioneImmagine
     {
         static void Main(string[] args)
         {
-            int colorazione, larghezza, altezza, pixel, b, kb, temp;
-
+            double colorazione, larghezza, altezza, pixel, b, kb, temp;
+            pixel = 0;
+            kb = 0;
             Console.WriteLine("Choose the coloring of your image(2,4,8,16 bit)");
-            colorazione = int.Parse(Console.ReadLine());
+            colorazione = double.Parse(Console.ReadLine());
             temp = colorazione;
             Console.Write("Choose the width of your image: ");
-            larghezza = int.Parse(Console.ReadLine());
+            larghezza = double.Parse(Console.ReadLine());
             if (larghezza > 0)
             {
                 Console.Write("Choose the height of your image:");
@@ -40,7 +41,7 @@ namespace DimensioneImmagine
                             pixel = larghezza * altezza;
                             b = 16 / 8;
                             kb = (pixel * b) / 1024;
-                            break;      
+                            break;
                     }
                     Console.WriteLine($"The pixel of your image are: {pixel}, your image has {kb} kilobyte.");
                 }
@@ -53,7 +54,7 @@ namespace DimensioneImmagine
             {
                 Console.WriteLine("Width not valid.");
             }
-            
+
         }
     }
 }
