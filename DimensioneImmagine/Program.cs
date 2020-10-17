@@ -7,8 +7,7 @@ namespace DimensioneImmagine
         static void Main(string[] args)
         {
             double colorazione, larghezza, altezza, pixel, b, kb;
-            pixel = 0;
-            kb = 0;
+            
             Console.WriteLine("Choose the coloring of your image between 1-24 bit:");
             colorazione = double.Parse(Console.ReadLine());
             
@@ -23,7 +22,7 @@ namespace DimensioneImmagine
                     pixel = larghezza * altezza;
                     b = colorazione / 8;
                     kb = (pixel * b) / 1024;
-                    Console.WriteLine($"The pixel of your image are: {pixel}, your image has {kb} kilobyte.");
+                    Console.WriteLine($"The pixel of your image are: {pixel}, your image weight is {kb} kilobyte.");
                 }
                 else
                 {
